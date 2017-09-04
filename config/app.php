@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => env('APP_NAME', 'Laravel 5 Boilerplate'),
+    'name' => env('APP_NAME', 'Laravel'),
 
     /*
     |--------------------------------------------------------------------------
@@ -64,7 +64,7 @@ return [
     |
     */
 
-    'timezone' => env('APP_TIMEZONE', 'UTC'),
+    'timezone' => 'UTC',
 
     /*
     |--------------------------------------------------------------------------
@@ -77,7 +77,7 @@ return [
     |
     */
 
-    'locale' => env('APP_LOCALE', 'en'),
+    'locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -90,18 +90,7 @@ return [
     |
     */
 
-    'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'),
-
-    /*
-    |--------------------------------------------------------------------------
-    | PHP Locale Code
-    |--------------------------------------------------------------------------
-    |
-    | The PHP locale determines the default locale that will be used
-    | by the Carbon library when setting Carbon's localization.
-    |
-    */
-    'locale_php' => env('APP_LOCALE_PHP', 'en_US'),
+    'fallback_locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -131,7 +120,7 @@ return [
     |
     */
 
-    'log' => env('APP_LOG', 'daily'),
+    'log' => env('APP_LOG', 'single'),
 
     'log_level' => env('APP_LOG_LEVEL', 'debug'),
 
@@ -177,28 +166,15 @@ return [
         /*
          * Package Service Providers...
          */
-        Arcanedev\LogViewer\LogViewerServiceProvider::class,
-        Arcanedev\NoCaptcha\NoCaptchaServiceProvider::class,
-        Collective\Html\HtmlServiceProvider::class,
-        Creativeorange\Gravatar\GravatarServiceProvider::class,
-        DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
-        HieuLe\Active\ActiveServiceProvider::class,
-        Laravel\Socialite\SocialiteServiceProvider::class,
         Laravel\Tinker\TinkerServiceProvider::class,
-        Yajra\Datatables\DatatablesServiceProvider::class,
 
         /*
          * Application Service Providers...
          */
-        App\Providers\AccessServiceProvider::class,
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
-        App\Providers\BladeServiceProvider::class,
-        //App\Providers\BroadcastServiceProvider::class,
-        App\Providers\ComposerServiceProvider::class,
+        // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
-        App\Providers\HistoryServiceProvider::class,
-        App\Providers\MacroServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
     ],
@@ -250,17 +226,10 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
-        /*
-         * Third Party Aliases
-         */
-        'Active'      => HieuLe\Active\Facades\Active::class,
-        'Breadcrumbs' => DaveJamesMiller\Breadcrumbs\Facade::class,
-        'Captcha'     => Arcanedev\NoCaptcha\Facades\NoCaptcha::class,
-        'Form'        => Collective\Html\FormFacade::class,
-        'Gravatar'    => Creativeorange\Gravatar\Facades\Gravatar::class,
-        'Html'        => Collective\Html\HtmlFacade::class,
-        'Socialite'   => Laravel\Socialite\Facades\Socialite::class,
-
     ],
 
+    'noreply-email'     => env('NOREPLY_EMAIL', 'support@geekyants.com'), 
+    'name'              => env('APP_NAME', 'BuilderX Team'), 
+    'admin-email'       => env('ADMIN_EMAIL', 'founders@sahusoft.com'),
+    'admin-name'        => env('ADMIN_NAME', 'Founders'),
 ];
